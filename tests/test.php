@@ -7,7 +7,7 @@ use Leuz\JitsiBundle\Entity\Payload;
 use Leuz\JitsiBundle\Entity\User;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 require_once __DIR__ . '/../vendor/autoload.php';
-/** @var array<array> app-level configuration options */
+
 $configs = [['jitsi' => ['api_key'=>'vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5/7ea96e', 'app_id'=>'vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5']]];
 // Build the service container
 $container = new ContainerBuilder();
@@ -38,5 +38,4 @@ $payload = (new Payload())
 
 $maker = $container->get('jitsi');
 $token = $maker->buildToken($user, $features, $payload);
-dd($token);
 echo "The document is at '$token'\n";

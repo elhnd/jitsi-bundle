@@ -72,7 +72,6 @@ class JitsiJwsBuilder
 
     public function build(): string
     {
-        //dd($this->jwk());
         $jws = $this->jwsBuilder()
         ->create()
         ->withPayload($this->composePayload())
