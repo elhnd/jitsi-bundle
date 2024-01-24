@@ -1,0 +1,13 @@
+# config/services.yaml
+parameters:
+    # nothing to declare
+services:
+    vendor\Module\ReportMaker\DocumentRepository:
+        arguments: ['']
+    vendor\Module\ReportMaker\DocumentFormatter:
+        autowire: true
+    vendor\Module\ReportMaker\ReportMaker:
+        autowire: true
+    app.document.maker:
+        alias: vendor\Module\ReportMaker\ReportMaker
+        public: true

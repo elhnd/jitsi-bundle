@@ -1,0 +1,27 @@
+{
+    "name": "leuz/jitsi-bundle",
+    "description": "A bundle for jitsi configuration in Symfony",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Leuz\\JitsiBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "elhadji",
+            "email": "eldji22@hotmail.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/dependency-injection": "^6.4",
+        "symfony/config": "^6.4",
+        "symfony/http-kernel": "^6.4",
+        "symfony/yaml": "^6.4"
+    },
+    "require": {
+        "web-token/jwt-framework": "3.3.x-dev"
+    }
+}
