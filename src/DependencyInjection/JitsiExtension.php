@@ -23,7 +23,10 @@ class JitsiExtension extends Extension
         $option = $this->processConfiguration(new Configuration(), $configs);
 
         $jitsiDefinition = $container->getDefinition('jitsi.jws.builder');
-        //dd($option);
+
         $jitsiDefinition->replaceArgument(0, $option['jitsi']['api_key']);
+        $jitsiDefinition->replaceArgument(1, $option['jitsi']['app_id']);
+        $jitsiDefinition->replaceArgument(2, $option['jitsi']['iss']);
+        $jitsiDefinition->replaceArgument(3, $option['jitsi']['aud']);
     }
 }

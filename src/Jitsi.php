@@ -11,9 +11,7 @@ class Jitsi
     public function __construct(
         private JitsiJwsBuilder $jitsiJwsBuilder
     )
-    {
-        
-    }
+    {}
 
     public function buildToken(User $user, Features $features, Payload $payload) 
     {

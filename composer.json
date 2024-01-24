@@ -18,7 +18,6 @@
     "require-dev": {
         "symfony/dependency-injection": "^6.4",
         "symfony/config": "^6.4",
-        "symfony/http-kernel": "^6.4",
         "symfony/yaml": "^6.4"
     },
     "require": {

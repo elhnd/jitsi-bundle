@@ -2,7 +2,7 @@
 
 namespace Leuz\JitsiBundle\Entity;
 
-class Features
+class Features 
 {
     private bool $isLiveStreaming;
     private bool $isRecording;

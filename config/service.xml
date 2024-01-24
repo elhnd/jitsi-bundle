@@ -7,6 +7,9 @@
     <services>
         <service id="jitsi.jws.builder" class="Leuz\JitsiBundle\JitsiJwsBuilder" public="true">
             <argument />
+            <argument />
+            <argument />
+            <argument />
         </service>
 
         <service id="jitsi" class="Leuz\JitsiBundle\Jitsi" public="true">

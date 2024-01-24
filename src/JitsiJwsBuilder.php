@@ -22,7 +22,10 @@ class JitsiJwsBuilder
     private Payload     $payload;
 
     public function __construct(
-        private string $apiKey = 'vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5/7ea96e'
+        private string $apiKey,
+        private string $sub,
+        private string $iss,
+        private string $aud
     )
     {}
 
@@ -40,7 +43,13 @@ class JitsiJwsBuilder
 
     public function setPayload(Payload $payload): self
     {
+        $payload
+            ->setIss($this->iss)
+            ->setAud($this->aud)
+            ->setSub($this->sub);
+
         $this->payload = $payload;
+
         $this->payload->setContext([
             'user' => $this->user->toArray(),
             'features' => $this->features->toArray()

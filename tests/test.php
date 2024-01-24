@@ -1,5 +1,4 @@
 <?php
-// tests/simple-app.php
 
 use Leuz\JitsiBundle\DependencyInjection\JitsiExtension;
 use Leuz\JitsiBundle\Entity\Features;
@@ -9,14 +8,12 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $configs = [['jitsi' => ['api_key'=>'vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5/7ea96e', 'app_id'=>'vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5']]];
-// Build the service container
+
 $container = new ContainerBuilder();
 $extension = new JitsiExtension();
 $extension->load($configs, $container);
 $container->compile();
 
-
-// Use the services in the bundle
 $user = (new User())
         ->setIsModerator(true)
         ->setEmail("eldji22@hotmail.fr")
@@ -31,11 +28,9 @@ $features = (new Features())
             ->setIsTranscription(true);
 
 $payload = (new Payload())
-            ->setIss('chat')
-            ->setAud('jitsi')
             ->setExp(7200)
             ->setNBF(10);
 
 $maker = $container->get('jitsi');
 $token = $maker->buildToken($user, $features, $payload);
-echo "The document is at '$token'\n";
+echo "The jitsi token is '$token'\n";
