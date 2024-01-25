@@ -6,7 +6,7 @@ use Leuz\JitsiBundle\Entity\Features;
 use Leuz\JitsiBundle\Entity\Payload;
 use Leuz\JitsiBundle\Entity\User;
 
-class Jitsi
+class Jitsi implements JitsiInterface
 {
     public function __construct(
         private JitsiJwsBuilder $jitsiJwsBuilder
