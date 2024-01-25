@@ -14,13 +14,18 @@
             "email": "eldji22@hotmail.fr"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require-dev": {
         "symfony/dependency-injection": "^6.4",
         "symfony/config": "^6.4",
         "symfony/yaml": "^6.4"
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
     "require": {
-        "web-token/jwt-framework": "3.3.x-dev"
+        "web-token/jwt-framework": "^3.2"
     }
 }
