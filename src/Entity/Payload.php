@@ -9,7 +9,7 @@ class Payload
     private int    $exp;
     private int    $nbf;
     private string $room = '*';
-    private string $sub = 'vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5'; // => APP_ID => vpaas-magic-cookie-3b3fbcd75def45c3928b8f7f9ff902a5
+    private string $sub;
     private array  $context;
 
     public function setIss(string $iss): self

@@ -14,8 +14,8 @@ use Leuz\JitsiBundle\Entity\User;
 
 class JitsiJwsBuilder
 {
-    const ALGO_SIGN = 'RS256';
-    const TYPE_SIGN = 'JWT';
+    private const ALGO_SIGN = 'RS256';
+    private const TYPE_SIGN = 'JWT';
 
     private User        $user;
     private Features    $features;
@@ -59,7 +59,7 @@ class JitsiJwsBuilder
 
     private function jwk(): JWK
     {
-        return JWKFactory::createFromKeyFile(__DIR__."/rsa-private.key");;
+        return JWKFactory::createFromKeyFile(__DIR__."/rsa-private.key");
     }
 
     private function algorithm(): AlgorithmManager 

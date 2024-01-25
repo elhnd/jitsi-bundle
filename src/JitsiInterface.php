@@ -8,5 +8,5 @@ use Leuz\JitsiBundle\Entity\User;
 
 interface JitsiInterface
 {
-    public function buildToken(User $user, Features $features, Payload $payload);
+    public function buildToken(User $user, Features $features, Payload $payload): string;
 }

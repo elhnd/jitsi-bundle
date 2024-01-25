@@ -13,7 +13,7 @@ class Jitsi implements JitsiInterface
     )
     {}
 
-    public function buildToken(User $user, Features $features, Payload $payload) 
+    public function buildToken(User $user, Features $features, Payload $payload): string
     {
         $token = $this->jitsiJwsBuilder
         ->setUser($user)

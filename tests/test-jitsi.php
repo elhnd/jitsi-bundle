@@ -31,6 +31,6 @@ $payload = (new Payload())
             ->setExp(7200)
             ->setNBF(10);
 
-$maker = $container->get('jitsi');
-$token = $maker->buildToken($user, $features, $payload);
+$jitsi = $container->get('jitsi');
+$token = $jitsi->buildToken($user, $features, $payload);
 echo "The jitsi token is '$token'\n";
