@@ -13,14 +13,10 @@ class Configuration implements ConfigurationInterface
 
         $treeBuilder->getRootNode()
             ->children()
-                ->arrayNode('jitsi')
-                    ->children()
-                        ->scalarNode('api_key')->isRequired()->end()
-                        ->scalarNode('app_id')->isRequired()->end()
-                        ->scalarNode('iss')->defaultValue('chat')->end()
-                        ->scalarNode('aud')->defaultValue('jitsi')->end()
-                    ->end()
-                ->end()
+                ->scalarNode('api_key')->isRequired()->end()
+                ->scalarNode('app_id')->isRequired()->end()
+                ->scalarNode('iss')->defaultValue('chat')->end()
+                ->scalarNode('aud')->defaultValue('jitsi')->end()
             ->end();
         return $treeBuilder;
     }

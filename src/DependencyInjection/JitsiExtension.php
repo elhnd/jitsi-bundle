@@ -24,9 +24,9 @@ class JitsiExtension extends Extension
 
         $jitsiDefinition = $container->getDefinition('jitsi.jws.builder');
 
-        $jitsiDefinition->replaceArgument(0, $option['jitsi']['api_key']);
-        $jitsiDefinition->replaceArgument(1, $option['jitsi']['app_id']);
-        $jitsiDefinition->replaceArgument(2, $option['jitsi']['iss']);
-        $jitsiDefinition->replaceArgument(3, $option['jitsi']['aud']);
+        $jitsiDefinition->replaceArgument(0, $option['api_key']);
+        $jitsiDefinition->replaceArgument(1, $option['app_id']);
+        $jitsiDefinition->replaceArgument(2, $option['iss']);
+        $jitsiDefinition->replaceArgument(3, $option['aud']);
     }
 }
