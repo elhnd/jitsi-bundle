@@ -15,5 +15,7 @@
         <service id="jitsi" class="Leuz\JitsiBundle\Jitsi" public="true">
             <argument type="service" id="jitsi.jws.builder" />
         </service>
+
+        <service id="Leuz\JitsiBundle\JitsiInterface" alias="jitsi" public="true" />
     </services>
 </container>
